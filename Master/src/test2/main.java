@@ -6,7 +6,7 @@ github.com/adanasir
 */
 
 
-//company2
+//Company A
 package test2;
 
 import java.net.*;
