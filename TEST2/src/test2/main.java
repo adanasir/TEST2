@@ -6,7 +6,7 @@ github.com/adanasir
 */
 
 
-//Company A
+//Master
 package test2;
 
 import java.net.*;
