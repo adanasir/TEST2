@@ -9,10 +9,7 @@ github.com/adanasir
 
 package test2;
 
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.net.UnknownHostException;
+import java.net.*;
 
 public class main{
 	
