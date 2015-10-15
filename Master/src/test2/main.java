@@ -15,10 +15,10 @@ public class main{
 	
    public static void main(String[] args){
 		
-	InetAddress ip;
+	Inet6Address ip;
 	try {
 			
-		ip = InetAddress.getLocalHost();
+		ip = (Inet6Address) Inet6Address.getLocalHost();
 		System.out.println("Current IP address : " + ip.getHostAddress());
 		
 		NetworkInterface network = NetworkInterface.getByInetAddress(ip);
