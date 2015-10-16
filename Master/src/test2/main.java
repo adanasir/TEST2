@@ -9,17 +9,20 @@ github.com/adanasir
 //Company A
 package test2;
 
+
+import java.net.InetAddress;
+import java.net.Inet6Address;
 import java.net.*;
 
+
 public class main{
-	
-   public static void main(String[] args){
-		
-	Inet6Address ip;
+    
+   public static void main(String[] args) throws UnknownHostException, SocketException{
+	 
+	InetAddress ip = InetAddress.getLocalHost();
 	try {
-			
-		ip = (Inet6Address) Inet6Address.getLocalHost();
-		System.out.println("Current IP address : " + ip.getHostAddress());
+            InetAddress ina= Inet6Address.getLocalHost();
+            System.out.println("Current IP address : " + ina.getHostAddress());
 		
 		NetworkInterface network = NetworkInterface.getByInetAddress(ip);
 			
@@ -32,19 +35,14 @@ public class main{
 			sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));		
 		}
 		System.out.println(sb.toString());
-			
-	} 
+        }
         
         catch (UnknownHostException e) {
 		
 		e.printStackTrace();
 		
 	} catch (SocketException e){
-			
-		e.printStackTrace();
-			
-	}
-	    
-   }
 
+        }
+   }
 }
